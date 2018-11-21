@@ -18,6 +18,24 @@ android {
 
         multiDexEnabled true
     }
+
+    signingConfigs {
+        debug {
+            storeFile file("EWGCommon.store")
+            storePassword 'EWG!@#$%^'
+            keyAlias 'EWGCommon'
+            keyPassword 'EWG!@#$%^'
+        }
+
+        release {
+            storeFile file("EWGCommon.store")
+            storePassword 'EWG!@#$%^'
+            keyAlias 'EWGCommon'
+            keyPassword 'EWG!@#$%^'
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
