@@ -28,6 +28,15 @@ android {
     buildToolsVersion '28.0.3'
 }
 
+uploadArchives {
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.jakewharton:butterknife:7.0.0'
