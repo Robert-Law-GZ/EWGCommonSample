@@ -28,6 +28,17 @@ android {
         }
     }
 
+    android.applicationVariants.all { variant ->
+
+        variant.outputs.all {
+            if (variant.buildType.name.equals("release")) {
+                outputFileName = "EWGCommonSample${defaultConfig.versionName}(${defaultConfig.versionCode})-release.apk"
+            } else {
+                outputFileName = "EWGCommonSample${defaultConfig.versionName}(${defaultConfig.versionCode})-debug.apk"
+            }
+        }
+
+    }
 
     buildTypes {
         release {
